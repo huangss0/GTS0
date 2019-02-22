@@ -17,6 +17,8 @@ namespace HssCF
             byte[] buffer = new byte[size];
             for (int i = 0; i < size; ++i) buffer[i] = 32;
             return buffer;
+
+
         }
 
         public static byte[] GetCommendBuffer(string cmd)
