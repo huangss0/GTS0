@@ -1,0 +1,6 @@
+Client: version='1';funcName='GetMessage';objLen='15';objState='toServer'
+Server: status='OK'
+Client: Person{age='5';name='Steven'}
+Server: status='Received';objLen='22';objState='toClient'
+Client: status='OK'
+Server: Order{buyer='Steven';date='11/24/1999';orderID='123456'}

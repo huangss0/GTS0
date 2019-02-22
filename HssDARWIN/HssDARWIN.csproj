@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3F20E17-B8D2-4C2E-9062-661E0E72C4AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HssDARWIN</RootNamespace>
+    <AssemblyName>HssDARWIN</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="hss_Infragistics4.Shared.v17.2">
+      <HintPath>Ref_DLLs\hss_Infragistics4.Shared.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="hss_Infragistics4.Win.Misc.v17.2">
+      <HintPath>Ref_DLLs\hss_Infragistics4.Win.Misc.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="hss_Infragistics4.Win.UltraWinEditors.v17.2">
+      <HintPath>Ref_DLLs\hss_Infragistics4.Win.UltraWinEditors.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="hss_Infragistics4.Win.UltraWinGrid.v17.2">
+      <HintPath>Ref_DLLs\hss_Infragistics4.Win.UltraWinGrid.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="hss_Infragistics4.Win.v17.2">
+      <HintPath>Ref_DLLs\hss_Infragistics4.Win.v17.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Utility.cs" />
+    <Compile Include="Helpers\UltraGrid_helper.cs" />
+    <Compile Include="Helpers\UltraTextEditor_helper.cs" />
+    <Compile Include="Helpers\ViewDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\ViewDataForm.Designer.cs">
+      <DependentUpon>ViewDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\WinControl_helper.cs" />
+    <Compile Include="Models\Countries\Country.cs" />
+    <Compile Include="Models\Countries\CountryMaster.cs" />
+    <Compile Include="Models\Countries\Country_ProcedureTypes.cs" />
+    <Compile Include="Models\Countries\ProcedureTypeMaster.cs" />
+    <Compile Include="Models\Custodians\CustodianMaster.cs" />
+    <Compile Include="Models\Depositaries\Depositary.cs" />
+    <Compile Include="Models\Depositaries\DepositaryMaster.cs" />
+    <Compile Include="Models\Details\DividendDetail_master.cs" />
+    <Compile Include="Models\Details\Dividend_Detail_simpleEF.cs" />
+    <Compile Include="Models\Details\Dividend_Detail_simple1.cs" />
+    <Compile Include="Models\Details\Dividend_Detail_simpleAP.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_attr.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func_XBRL.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control_Queue.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_DB.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func1.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func_ESP2.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func3.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func4.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func5.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend_func_AP.cs" />
+    <Compile Include="Models\Dividends\Form_DividendSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Dividends\Form_DividendSelector.Designer.cs">
+      <DependentUpon>Form_DividendSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTC_Model\DTC_model_master.cs" />
+    <Compile Include="Models\DTC_Model\DTCPositionModelNumber_Mapping.cs" />
+    <Compile Include="Models\DTC_Participant\DTC_Participants.cs" />
+    <Compile Include="Models\DTC_Participant\DTC_Participants_master.cs" />
+    <Compile Include="Models\DTC_Position\Dividend_DTC_Position.cs" />
+    <Compile Include="Models\DTC_Position\DTCpositionHeader_master.cs" />
+    <Compile Include="Models\EDI_synonyms\EDIcountryMaster.cs" />
+    <Compile Include="Models\EDI_synonyms\EDItime_master.cs" />
+    <Compile Include="Models\EDI_synonyms\EDI_country.cs" />
+    <Compile Include="Models\EDI_synonyms\EDI_times.cs" />
+    <Compile Include="Models\EDI_synonyms\RateMaster_edi.cs" />
+    <Compile Include="Models\EDI_synonyms\StatutoryRate_edi.cs" />
+    <Compile Include="Models\ESP2\Custodians\PrimaryCustodian.cs" />
+    <Compile Include="Models\ESP2\Depositaries\DepositaryIdemnification.cs" />
+    <Compile Include="Models\ESP2\Depositaries\DepositaryInfo.cs" />
+    <Compile Include="Models\ESP2\Depositaries\DepositaryInfoMaster.cs" />
+    <Compile Include="Models\ESP2\ESP_system\ESPsys.cs" />
+    <Compile Include="Models\ESP2\ESP_system\ESPsys_master.cs" />
+    <Compile Include="Models\ESP2\Events\Event.cs" />
+    <Compile Include="Models\ESP2\Events\EventContactInfo.cs" />
+    <Compile Include="Models\ESP2\Events\EventMaster.cs" />
+    <Compile Include="Models\ESP2\Securities\Security.cs" />
+    <Compile Include="Models\ESP2\Securities\SecurityMaster.cs" />
+    <Compile Include="Models\Fees\Dividend_Schedule_Of_Fees_DSC.cs" />
+    <Compile Include="Models\Fees\DSC_master.cs" />
+    <Compile Include="Models\Fees\Schedule_Of_Fees_DSC.cs" />
+    <Compile Include="Models\Fees\Schedule_Of_Fees_Per_Rate.cs" />
+    <Compile Include="Models\Filing\DividendFiling_master.cs" />
+    <Compile Include="Models\Filing\Dividend_Filing.cs" />
+    <Compile Include="Models\FX_payment\DividendPaymentMaster.cs" />
+    <Compile Include="Models\FX_payment\FX_Input_master.cs" />
+    <Compile Include="Models\Log\Audit_History.cs" />
+    <Compile Include="Models\Log\EventLog.cs" />
+    <Compile Include="Models\Log\EventLog_master.cs" />
+    <Compile Include="Models\RSH\RSH_log.cs" />
+    <Compile Include="Models\RSH\RSH_master.cs" />
+    <Compile Include="Models\RSH\SavedFiles_CSV.cs" />
+    <Compile Include="Models\RSH\SavedFiles_master.cs" />
+    <Compile Include="Models\Securities\Security.cs" />
+    <Compile Include="Models\Securities\SecurityMaster.cs" />
+    <Compile Include="Models\Securities\Attribute_Input_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Securities\Attribute_Input_form.Designer.cs">
+      <DependentUpon>Attribute_Input_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tasks\ADR_Group.cs" />
+    <Compile Include="Models\Tasks\ADR_Group_Member.cs" />
+    <Compile Include="Models\Tasks\ADR_Member_Country.cs" />
+    <Compile Include="Models\Tasks\ADR_TaskOwner.cs" />
+    <Compile Include="Models\Tasks\Task20\Task20_master.cs" />
+    <Compile Include="Models\Tasks\Task20\Task_Detail_20A.cs" />
+    <Compile Include="Models\Tasks\Task20\Task_Detail_20B.cs" />
+    <Compile Include="Models\Tasks\Task20\Task_Detail_20C.cs" />
+    <Compile Include="Models\Tasks\Task20\Task_Detail_20D.cs" />
+    <Compile Include="Models\Tasks\Task21\Task21_secMaster.cs" />
+    <Compile Include="Models\Tasks\Task21\Task21_security.cs" />
+    <Compile Include="Models\Tasks\TaskDetailMaster.cs" />
+    <Compile Include="Models\Tasks\TaskForm_viewControl.cs" />
+    <Compile Include="Models\Tasks\TaskMemberMaster.cs" />
+    <Compile Include="Models\Tasks\Task_Detail.cs" />
+    <Compile Include="Models\Tasks\Task21\Task_Detail_21.cs" />
+    <Compile Include="Models\XBRL\DvdXBRL\DividendXBRL.cs" />
+    <Compile Include="Models\XBRL\DvdXBRL\DividendXBRL_master.cs" />
+    <Compile Include="Models\XBRL\DvdXBRL\DvdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\XBRL\DvdXBRL\DvdForm.Designer.cs">
+      <DependentUpon>DvdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XBRL\Event\Helper_XBRL_approval.cs" />
+    <Compile Include="Models\XBRL\Balance\SavedFilesCustodianBalance.cs" />
+    <Compile Include="Models\XBRL\Event\XBRL_event_info.cs" />
+    <Compile Include="Models\XBRL\Event\XBRL_event_matrix.cs" />
+    <Compile Include="Models\XBRL\UI\XBRL_UserControl_init.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\XBRL\Fields\XBRLfield.cs" />
+    <Compile Include="Models\XBRL\Fields\XBRLfield_master.cs" />
+    <Compile Include="Models\XBRL\Event\XBRL_SavedFile.cs" />
+    <Compile Include="Models\XBRL\Event\XBRL_SavedFile_master.cs" />
+    <Compile Include="Models\XBRL\UI\XBRL_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\XBRL\UI\XBRL_UserControl.Designer.cs">
+      <DependentUpon>XBRL_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XBRL\UI\XBRL_UserControl_func.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubProjects\Business Development\BD_detailSum.cs" />
+    <Compile Include="SubProjects\Business Development\BD_Dividend.cs" />
+    <Compile Include="SubProjects\Business Development\BD_DTC_Position.cs" />
+    <Compile Include="SubProjects\Business Development\ForThread.cs" />
+    <Compile Include="SubProjects\Business Development\DTC_Solicitation.cs" />
+    <Compile Include="SubProjects\Business Development\ThreadStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\Business Development\ThreadStatusForm.Designer.cs">
+      <DependentUpon>ThreadStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\Daily Jobs\DailyJobs_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\Daily Jobs\DailyJobs_form.Designer.cs">
+      <DependentUpon>DailyJobs_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\Daily Jobs\Hss_DailyJobs_master.cs" />
+    <Compile Include="SubProjects\Daily Jobs\Hss_DailyJobs.cs" />
+    <Compile Include="SubProjects\Daily Jobs\InboundData3_SPR.cs" />
+    <Compile Include="SubProjects\Daily Jobs\JobsMaster.cs" />
+    <Compile Include="SubProjects\ElectionFile\Custodian_ele.cs" />
+    <Compile Include="SubProjects\ElectionFile\Document\ElectionDocument_func.cs" />
+    <Compile Include="SubProjects\ElectionFile\Election_item.cs" />
+    <Compile Include="SubProjects\ElectionFile\Document\ElectionDocument.cs" />
+    <Compile Include="SubProjects\ElectionFile\EventInfo_ele.cs" />
+    <Compile Include="SubProjects\ElectionFile\Summary_ele.cs" />
+    <Compile Include="Models\Custodians\Custodian.cs" />
+    <Compile Include="Models\Custodians\DividendCustodian.cs" />
+    <Compile Include="Models\Details\Dividend_Detail_full.cs" />
+    <Compile Include="Models\Dividends\Helper_Dividend.cs" />
+    <Compile Include="Models\DTC_Participant\Participant.cs" />
+    <Compile Include="Models\DTC_Participant\ParticipantMaster.cs" />
+    <Compile Include="Models\DTC_Position\old\Position.cs" />
+    <Compile Include="Models\DTC_Position\DTC_Position_Headers.cs" />
+    <Compile Include="Models\DTC_Position\old\Rates.cs" />
+    <Compile Include="Models\Election\DividendElectionOption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\FX_payment\Dividend_Payment.cs" />
+    <Compile Include="Models\FX_payment\FX_Input.cs" />
+    <Compile Include="Models\Dividends\Dividend_Control %28Approved%29\Dividend.cs" />
+    <Compile Include="SubProjects\HssResearch\Person.cs" />
+    <Compile Include="SubProjects\HssResearch\ResearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\HssResearch\ResearchForm.Designer.cs">
+      <DependentUpon>ResearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\HssResearch\TestClass.cs" />
+    <Compile Include="SubProjects\SPR Report\DTC_request_file.cs" />
+    <Compile Include="SubProjects\SPR Report\SPR_fileControl.cs" />
+    <Compile Include="SubProjects\SPR Report\SPR_file.cs" />
+    <Compile Include="SubProjects\SPR Report\SPR_report_UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubProjects\SPR Report\SPR_report_UserControl.Designer.cs">
+      <DependentUpon>SPR_report_UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\MainForm_func.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\MainForm_init.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task17\Form_task17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task17\Form_task17.Designer.cs">
+      <DependentUpon>Form_task17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_detail.Designer.cs">
+      <DependentUpon>Form_task21_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_sec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_sec.Designer.cs">
+      <DependentUpon>Form_task21_sec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubProjects\UserProfile\HssGridColumn.cs" />
+    <Compile Include="SubProjects\UserProfile\HssGridConfig.cs" />
+    <Compile Include="SubProjects\UserProfile\HssTabConfig.cs" />
+    <Compile Include="SubProjects\UserProfile\Hss_UserConfig\Hss_UserConfig_func.cs" />
+    <Compile Include="SubProjects\UserProfile\Hss_UserConfig\Hss_UserConfig.cs" />
+    <Compile Include="SubProjects\UserProfile\Hss_UserConfig\Hss_UserConfig_init.cs" />
+    <Compile Include="SubProjects\UserProfile\UserConfigMaster.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\ViewDataForm.resx">
+      <DependentUpon>ViewDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Cancel.ico" />
+    <EmbeddedResource Include="Images\Document.ico" />
+    <EmbeddedResource Include="Images\OK.ico" />
+    <EmbeddedResource Include="Images\Restore.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\Dividends\Form_DividendSelector.resx">
+      <DependentUpon>Form_DividendSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Securities\Attribute_Input_form.resx">
+      <DependentUpon>Attribute_Input_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\XBRL\DvdXBRL\DvdForm.resx">
+      <DependentUpon>DvdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\XBRL\UI\XBRL_UserControl.resx">
+      <DependentUpon>XBRL_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\Business Development\ThreadStatusForm.resx">
+      <DependentUpon>ThreadStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\Daily Jobs\DailyJobs_form.resx">
+      <DependentUpon>DailyJobs_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\HssResearch\ResearchForm.resx">
+      <DependentUpon>ResearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\SPR Report\SPR_report_UserControl.resx">
+      <DependentUpon>SPR_report_UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\TaskMgr\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\TaskMgr\Forms\Task17\Form_task17.resx">
+      <DependentUpon>Form_task17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_detail.resx">
+      <DependentUpon>Form_task21_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubProjects\TaskMgr\Forms\Task21\Form_task21_sec.resx">
+      <DependentUpon>Form_task21_sec.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HssUtility\HssUtility.csproj">
+      <Project>{899bf142-2249-4aa0-8cb5-330162ea5f49}</Project>
+      <Name>HssUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ref_DLLs\hss_Infragistics4.Shared.v17.2.dll" />
+    <Content Include="Ref_DLLs\hss_Infragistics4.Win.Misc.v17.2.dll" />
+    <Content Include="Ref_DLLs\hss_Infragistics4.Win.UltraWinEditors.v17.2.dll" />
+    <Content Include="Ref_DLLs\hss_Infragistics4.Win.UltraWinGrid.v17.2.dll" />
+    <Content Include="Ref_DLLs\hss_Infragistics4.Win.v17.2.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

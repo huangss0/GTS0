@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF8D57B3-A9BA-42A7-99D4-089CB72DD6CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TestVB_form.My.MyApplication</StartupObject>
+    <RootNamespace>TestVB_form</RootNamespace>
+    <AssemblyName>TestVB_form</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TestVB_form.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TestVB_form.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Shared.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.SupportDialogs.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v17.1.FormulaBuilder, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\School.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>School.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UltraGridForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UltraGridForm.Designer.vb">
+      <DependentUpon>UltraGridForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RibbonForm.Designer.vb">
+      <DependentUpon>RibbonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test_UserControl.Designer.vb">
+      <DependentUpon>Test_UserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test_UserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UltraGridForm.resx">
+      <DependentUpon>UltraGridForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm.resx">
+      <DependentUpon>RibbonForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test_UserControl.resx">
+      <DependentUpon>Test_UserControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSets\School.xsc">
+      <DependentUpon>School.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\School.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>School.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSets\School.xss">
+      <DependentUpon>School.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hssIMG\addons32.png" />
+    <Content Include="hssIMG\AdobeReader.ico" />
+    <Content Include="hssIMG\AdobeReader1.ico" />
+    <Content Include="hssIMG\bg_globetax.png" />
+    <Content Include="hssIMG\BlankIcon.ico" />
+    <Content Include="hssIMG\bold16.png" />
+    <Content Include="hssIMG\borderbottom16.png" />
+    <Content Include="hssIMG\casing16.png" />
+    <Content Include="hssIMG\close32.png" />
+    <Content Include="hssIMG\copy16.png" />
+    <Content Include="hssIMG\copyformat16.png" />
+    <Content Include="hssIMG\cut16.png" />
+    <Content Include="hssIMG\Database.ico" />
+    <Content Include="hssIMG\DMSLogo.png" />
+    <Content Include="hssIMG\Document Text.ico" />
+    <Content Include="hssIMG\eraseformat16.png" />
+    <Content Include="hssIMG\excel_icon.jpg" />
+    <Content Include="hssIMG\exit16.png" />
+    <Content Include="hssIMG\fill16.png" />
+    <Content Include="hssIMG\find32.png" />
+    <Content Include="hssIMG\fontcolor16.png" />
+    <Content Include="hssIMG\fontsizedecrease16.png" />
+    <Content Include="hssIMG\fontsizeincrease16.png" />
+    <Content Include="hssIMG\goto16.png" />
+    <Content Include="hssIMG\hilight16.png" />
+    <Content Include="hssIMG\indentdecrease16.png" />
+    <Content Include="hssIMG\indentdecrease161.png" />
+    <Content Include="hssIMG\indentincrease16.png" />
+    <Content Include="hssIMG\Info2.ico" />
+    <Content Include="hssIMG\invisiblechars16.png" />
+    <Content Include="hssIMG\italic16.png" />
+    <Content Include="hssIMG\Load Image.png" />
+    <Content Include="hssIMG\main_bg.png" />
+    <Content Include="hssIMG\multilevellist16.png" />
+    <Content Include="hssIMG\newdocument32.png" />
+    <Content Include="hssIMG\ocr.png" />
+    <Content Include="hssIMG\ocr32.png" />
+    <Content Include="hssIMG\open16.png" />
+    <Content Include="hssIMG\open161.png" />
+    <Content Include="hssIMG\open32.png" />
+    <Content Include="hssIMG\options16.png" />
+    <Content Include="hssIMG\orderedlist16.png" />
+    <Content Include="hssIMG\pageblank16.png" />
+    <Content Include="hssIMG\paragraphspacing16.png" />
+    <Content Include="hssIMG\paste16.png" />
+    <Content Include="hssIMG\paste321.png" />
+    <Content Include="hssIMG\pastelink16.png" />
+    <Content Include="hssIMG\pastespecial16.png" />
+    <Content Include="hssIMG\picboxAnnotationBar.png" />
+    <Content Include="hssIMG\picboxClose_Down.png" />
+    <Content Include="hssIMG\picboxClose_Enter.png" />
+    <Content Include="hssIMG\picboxClose_Leave.png" />
+    <Content Include="hssIMG\picboxCrop_Disabled.png" />
+    <Content Include="hssIMG\picboxCrop_Down.png" />
+    <Content Include="hssIMG\picboxCrop_Enter.png" />
+    <Content Include="hssIMG\picboxCrop_Leave.png" />
+    <Content Include="hssIMG\picboxCurrentImage_Leave.png" />
+    <Content Include="hssIMG\picboxDeleteAll_Disabled.png" />
+    <Content Include="hssIMG\picboxDeleteAll_Down.png" />
+    <Content Include="hssIMG\picboxDeleteAll_Enter.png" />
+    <Content Include="hssIMG\picboxDeleteAll_Leave.png" />
+    <Content Include="hssIMG\picboxDeleteAnnotationA_Disabled.png" />
+    <Content Include="hssIMG\picboxDeleteAnnotationA_Down.png" />
+    <Content Include="hssIMG\picboxDeleteAnnotationA_Enter.png" />
+    <Content Include="hssIMG\picboxDeleteAnnotationA_Leave.png" />
+    <Content Include="hssIMG\picboxDelete_Disabled.png" />
+    <Content Include="hssIMG\picboxDelete_Down.png" />
+    <Content Include="hssIMG\picboxDelete_Enter.png" />
+    <Content Include="hssIMG\picboxDelete_Leave.png" />
+    <Content Include="hssIMG\picboxEllipseA_Disabled.png" />
+    <Content Include="hssIMG\picboxEllipseA_Down.png" />
+    <Content Include="hssIMG\picboxEllipseA_Enter.png" />
+    <Content Include="hssIMG\picboxEllipseA_Leave.png" />
+    <Content Include="hssIMG\picboxEllipse_Disabled.png" />
+    <Content Include="hssIMG\picboxEllipse_Down.png" />
+    <Content Include="hssIMG\picboxEllipse_Enter.png" />
+    <Content Include="hssIMG\picboxEllipse_Leave.png" />
+    <Content Include="hssIMG\picboxFirst_Disabled.png" />
+    <Content Include="hssIMG\picboxFirst_Down.png" />
+    <Content Include="hssIMG\picboxFirst_Enter.png" />
+    <Content Include="hssIMG\picboxFirst_Leave.png" />
+    <Content Include="hssIMG\picboxFlip_Disabled.png" />
+    <Content Include="hssIMG\picboxFlip_Down.png" />
+    <Content Include="hssIMG\picboxFlip_Enter.png" />
+    <Content Include="hssIMG\picboxFlip_Leave.png" />
+    <Content Include="hssIMG\picboxHand_Disabled.png" />
+    <Content Include="hssIMG\picboxHand_Down.png" />
+    <Content Include="hssIMG\picboxHand_Enter.png" />
+    <Content Include="hssIMG\picboxHand_Leave.png" />
+    <Content Include="hssIMG\picboxLast_Disabled.png" />
+    <Content Include="hssIMG\picboxLast_Down.png" />
+    <Content Include="hssIMG\picboxLast_Enter.png" />
+    <Content Include="hssIMG\picboxLast_Leave.png" />
+    <Content Include="hssIMG\picboxLineA_Disabled.png" />
+    <Content Include="hssIMG\picboxLineA_Down.png" />
+    <Content Include="hssIMG\picboxLineA_Enter.png" />
+    <Content Include="hssIMG\picboxLineA_Leave.png" />
+    <Content Include="hssIMG\picboxLine_Disabled.png" />
+    <Content Include="hssIMG\picboxLine_Down.png" />
+    <Content Include="hssIMG\picboxLine_Enter.png" />
+    <Content Include="hssIMG\picboxLine_Leave.png" />
+    <Content Include="hssIMG\picboxLoadImage_Disabled.png" />
+    <Content Include="hssIMG\picboxLoadImage_Down.png" />
+    <Content Include="hssIMG\picboxLoadImage_Enter.png" />
+    <Content Include="hssIMG\picboxLoadImage_Leave.png" />
+    <Content Include="hssIMG\picboxMax_Down.png" />
+    <Content Include="hssIMG\picboxMax_Enter.png" />
+    <Content Include="hssIMG\picboxMax_Leave.png" />
+    <Content Include="hssIMG\picboxMin_Down.png" />
+    <Content Include="hssIMG\picboxMin_Enter.png" />
+    <Content Include="hssIMG\picboxMin_Leave.png" />
+    <Content Include="hssIMG\picboxMirror_Disabled.png" />
+    <Content Include="hssIMG\picboxMirror_Down.png" />
+    <Content Include="hssIMG\picboxMirror_Enter.png" />
+    <Content Include="hssIMG\picboxMirror_Leave.png" />
+    <Content Include="hssIMG\picboxNext_Disabled.png" />
+    <Content Include="hssIMG\picboxNext_Down.png" />
+    <Content Include="hssIMG\picboxNext_Enter.png" />
+    <Content Include="hssIMG\picboxNext_Leave.png" />
+    <Content Include="hssIMG\picboxPoint_Disabled.png" />
+    <Content Include="hssIMG\picboxPoint_Down.png" />
+    <Content Include="hssIMG\picboxPoint_Enter.png" />
+    <Content Include="hssIMG\picboxPoint_Leave.png" />
+    <Content Include="hssIMG\picboxPrevious_Disabled.png" />
+    <Content Include="hssIMG\picboxPrevious_Down.png" />
+    <Content Include="hssIMG\picboxPrevious_Enter.png" />
+    <Content Include="hssIMG\picboxPrevious_Leave.png" />
+    <Content Include="hssIMG\picboxRectangleA_Disabled.png" />
+    <Content Include="hssIMG\picboxRectangleA_Down.png" />
+    <Content Include="hssIMG\picboxRectangleA_Enter.png" />
+    <Content Include="hssIMG\picboxRectangleA_Leave.png" />
+    <Content Include="hssIMG\picboxRectangle_Disabled.png" />
+    <Content Include="hssIMG\picboxRectangle_Down.png" />
+    <Content Include="hssIMG\picboxRectangle_Enter.png" />
+    <Content Include="hssIMG\picboxRectangle_Leave.png" />
+    <Content Include="hssIMG\picboxResample_Disabled.png" />
+    <Content Include="hssIMG\picboxResample_Down.png" />
+    <Content Include="hssIMG\picboxResample_Enter.png" />
+    <Content Include="hssIMG\picboxResample_Leave.png" />
+    <Content Include="hssIMG\picboxRotateLeft_Disabled.png" />
+    <Content Include="hssIMG\picboxRotateLeft_Down.png" />
+    <Content Include="hssIMG\picboxRotateLeft_Enter.png" />
+    <Content Include="hssIMG\picboxRotateLeft_Leave.png" />
+    <Content Include="hssIMG\picboxRotateRight_Disabled.png" />
+    <Content Include="hssIMG\picboxRotateRight_Down.png" />
+    <Content Include="hssIMG\picboxRotateRight_Enter.png" />
+    <Content Include="hssIMG\picboxRotateRight_Leave.png" />
+    <Content Include="hssIMG\picboxRotate_Disabled.png" />
+    <Content Include="hssIMG\picboxRotate_Down.png" />
+    <Content Include="hssIMG\picboxRotate_Enter.png" />
+    <Content Include="hssIMG\picboxRotate_Leave.png" />
+    <Content Include="hssIMG\picboxSave_Disabled.png" />
+    <Content Include="hssIMG\picboxSave_Down.png" />
+    <Content Include="hssIMG\picboxSave_Enter.png" />
+    <Content Include="hssIMG\picboxSave_Leave.png" />
+    <Content Include="hssIMG\picboxScan_Disabled.png" />
+    <Content Include="hssIMG\picboxScan_Down.png" />
+    <Content Include="hssIMG\picboxScan_Enter.png" />
+    <Content Include="hssIMG\picboxScan_Leave.png" />
+    <Content Include="hssIMG\picboxTextA_Disabled.png" />
+    <Content Include="hssIMG\picboxTextA_Down.png" />
+    <Content Include="hssIMG\picboxTextA_Enter.png" />
+    <Content Include="hssIMG\picboxTextA_Leave.png" />
+    <Content Include="hssIMG\picboxText_Disabled.png" />
+    <Content Include="hssIMG\picboxText_Down.png" />
+    <Content Include="hssIMG\picboxText_Enter.png" />
+    <Content Include="hssIMG\picboxText_Leave.png" />
+    <Content Include="hssIMG\picboxTitle.png" />
+    <Content Include="hssIMG\picboxTotalImage_Leave.png" />
+    <Content Include="hssIMG\picboxZoomIn_Disabled.png" />
+    <Content Include="hssIMG\picboxZoomIn_Down.png" />
+    <Content Include="hssIMG\picboxZoomIn_Enter.png" />
+    <Content Include="hssIMG\picboxZoomIn_Leave.png" />
+    <Content Include="hssIMG\picboxZoomOut_Disabled.png" />
+    <Content Include="hssIMG\picboxZoomOut_Down.png" />
+    <Content Include="hssIMG\picboxZoomOut_Enter.png" />
+    <Content Include="hssIMG\picboxZoomOut_Leave.png" />
+    <Content Include="hssIMG\picboxZoom_Disabled.png" />
+    <Content Include="hssIMG\picboxZoom_Down.png" />
+    <Content Include="hssIMG\picboxZoom_Enter.png" />
+    <Content Include="hssIMG\picboxZoom_Leave.png" />
+    <Content Include="hssIMG\prepare32.png" />
+    <Content Include="hssIMG\print32.png" />
+    <Content Include="hssIMG\print321.png" />
+    <Content Include="hssIMG\printpreview32.png" />
+    <Content Include="hssIMG\printquick16.png" />
+    <Content Include="hssIMG\printquick32.png" />
+    <Content Include="hssIMG\publish32.png" />
+    <Content Include="hssIMG\pubrecs-e1457650512235.jpg" />
+    <Content Include="hssIMG\replace16.png" />
+    <Content Include="hssIMG\save16.png" />
+    <Content Include="hssIMG\save161.png" />
+    <Content Include="hssIMG\save32.png" />
+    <Content Include="hssIMG\saveas32.png" />
+    <Content Include="hssIMG\saveas321.png" />
+    <Content Include="hssIMG\scanner.png" />
+    <Content Include="hssIMG\Search.ico" />
+    <Content Include="hssIMG\Search1.ico" />
+    <Content Include="hssIMG\select16.png" />
+    <Content Include="hssIMG\send32.png" />
+    <Content Include="hssIMG\smallscanner.png" />
+    <Content Include="hssIMG\sort16.png" />
+    <Content Include="hssIMG\strikethru16.png" />
+    <Content Include="hssIMG\style16.png" />
+    <Content Include="hssIMG\stylechange32.png" />
+    <Content Include="hssIMG\styleset16.png" />
+    <Content Include="hssIMG\subindex16.png" />
+    <Content Include="hssIMG\superindex16.png" />
+    <Content Include="hssIMG\textaligncenter16.png" />
+    <Content Include="hssIMG\textalignjustify16.png" />
+    <Content Include="hssIMG\textalignleft16.png" />
+    <Content Include="hssIMG\textalignright16.png" />
+    <Content Include="hssIMG\themefont.png" />
+    <Content Include="hssIMG\Tree.ico" />
+    <Content Include="hssIMG\TWAIN Source.png" />
+    <Content Include="hssIMG\underline16.png" />
+    <Content Include="hssIMG\undo16.png" />
+    <Content Include="hssIMG\unorderedlist16.png" />
+    <Content Include="hssIMG\upload-icon.png" />
+    <Content Include="hssIMG\Upload1.bmp" />
+    <Content Include="hssIMG\User.ico" />
+    <Content Include="hssIMG\word2003doc32.png" />
+    <Content Include="hssIMG\worddocument32.png" />
+    <Content Include="hssIMG\wordtemplate32.png" />
+    <Content Include="Icons\addons32.png" />
+    <Content Include="Icons\AdobeReader.ico" />
+    <Content Include="Icons\AdobeReader1.ico" />
+    <Content Include="Icons\bg_globetax.png" />
+    <Content Include="Icons\BlankIcon.ico" />
+    <Content Include="Icons\bold16.png" />
+    <Content Include="Icons\borderbottom16.png" />
+    <Content Include="Icons\casing16.png" />
+    <Content Include="Icons\close32.png" />
+    <Content Include="Icons\copy16.png" />
+    <Content Include="Icons\copyformat16.png" />
+    <Content Include="Icons\cut16.png" />
+    <Content Include="Icons\Database.ico" />
+    <Content Include="Icons\DMSLogo.png" />
+    <Content Include="Icons\Document Text.ico" />
+    <Content Include="Icons\eraseformat16.png" />
+    <Content Include="Icons\excel_icon.jpg" />
+    <Content Include="Icons\exit16.png" />
+    <Content Include="Icons\fill16.png" />
+    <Content Include="Icons\find32.png" />
+    <Content Include="Icons\fontcolor16.png" />
+    <Content Include="Icons\fontsizedecrease16.png" />
+    <Content Include="Icons\fontsizeincrease16.png" />
+    <Content Include="Icons\goto16.png" />
+    <Content Include="Icons\hilight16.png" />
+    <Content Include="Icons\indentdecrease16.png" />
+    <Content Include="Icons\indentdecrease161.png" />
+    <Content Include="Icons\indentincrease16.png" />
+    <Content Include="Icons\Info2.ico" />
+    <Content Include="Icons\invisiblechars16.png" />
+    <Content Include="Icons\italic16.png" />
+    <Content Include="Icons\Load Image.png" />
+    <Content Include="Icons\main_bg.png" />
+    <Content Include="Icons\multilevellist16.png" />
+    <Content Include="Icons\newdocument32.png" />
+    <Content Include="Icons\ocr.png" />
+    <Content Include="Icons\ocr32.png" />
+    <Content Include="Icons\open16.png" />
+    <Content Include="Icons\open161.png" />
+    <Content Include="Icons\open32.png" />
+    <Content Include="Icons\options16.png" />
+    <Content Include="Icons\orderedlist16.png" />
+    <Content Include="Icons\pageblank16.png" />
+    <Content Include="Icons\paragraphspacing16.png" />
+    <Content Include="Icons\paste16.png" />
+    <Content Include="Icons\paste321.png" />
+    <Content Include="Icons\pastelink16.png" />
+    <Content Include="Icons\pastespecial16.png" />
+    <Content Include="Icons\picboxAnnotationBar.png" />
+    <Content Include="Icons\picboxClose_Down.png" />
+    <Content Include="Icons\picboxClose_Enter.png" />
+    <Content Include="Icons\picboxClose_Leave.png" />
+    <Content Include="Icons\picboxCrop_Disabled.png" />
+    <Content Include="Icons\picboxCrop_Down.png" />
+    <Content Include="Icons\picboxCrop_Enter.png" />
+    <Content Include="Icons\picboxCrop_Leave.png" />
+    <Content Include="Icons\picboxCurrentImage_Leave.png" />
+    <Content Include="Icons\picboxDeleteAll_Disabled.png" />
+    <Content Include="Icons\picboxDeleteAll_Down.png" />
+    <Content Include="Icons\picboxDeleteAll_Enter.png" />
+    <Content Include="Icons\picboxDeleteAll_Leave.png" />
+    <Content Include="Icons\picboxDeleteAnnotationA_Disabled.png" />
+    <Content Include="Icons\picboxDeleteAnnotationA_Down.png" />
+    <Content Include="Icons\picboxDeleteAnnotationA_Enter.png" />
+    <Content Include="Icons\picboxDeleteAnnotationA_Leave.png" />
+    <Content Include="Icons\picboxDelete_Disabled.png" />
+    <Content Include="Icons\picboxDelete_Down.png" />
+    <Content Include="Icons\picboxDelete_Enter.png" />
+    <Content Include="Icons\picboxDelete_Leave.png" />
+    <Content Include="Icons\picboxEllipseA_Disabled.png" />
+    <Content Include="Icons\picboxEllipseA_Down.png" />
+    <Content Include="Icons\picboxEllipseA_Enter.png" />
+    <Content Include="Icons\picboxEllipseA_Leave.png" />
+    <Content Include="Icons\picboxEllipse_Disabled.png" />
+    <Content Include="Icons\picboxEllipse_Down.png" />
+    <Content Include="Icons\picboxEllipse_Enter.png" />
+    <Content Include="Icons\picboxEllipse_Leave.png" />
+    <Content Include="Icons\picboxFirst_Disabled.png" />
+    <Content Include="Icons\picboxFirst_Down.png" />
+    <Content Include="Icons\picboxFirst_Enter.png" />
+    <Content Include="Icons\picboxFirst_Leave.png" />
+    <Content Include="Icons\picboxFlip_Disabled.png" />
+    <Content Include="Icons\picboxFlip_Down.png" />
+    <Content Include="Icons\picboxFlip_Enter.png" />
+    <Content Include="Icons\picboxFlip_Leave.png" />
+    <Content Include="Icons\picboxHand_Disabled.png" />
+    <Content Include="Icons\picboxHand_Down.png" />
+    <Content Include="Icons\picboxHand_Enter.png" />
+    <Content Include="Icons\picboxHand_Leave.png" />
+    <Content Include="Icons\picboxLast_Disabled.png" />
+    <Content Include="Icons\picboxLast_Down.png" />
+    <Content Include="Icons\picboxLast_Enter.png" />
+    <Content Include="Icons\picboxLast_Leave.png" />
+    <Content Include="Icons\picboxLineA_Disabled.png" />
+    <Content Include="Icons\picboxLineA_Down.png" />
+    <Content Include="Icons\picboxLineA_Enter.png" />
+    <Content Include="Icons\picboxLineA_Leave.png" />
+    <Content Include="Icons\picboxLine_Disabled.png" />
+    <Content Include="Icons\picboxLine_Down.png" />
+    <Content Include="Icons\picboxLine_Enter.png" />
+    <Content Include="Icons\picboxLine_Leave.png" />
+    <Content Include="Icons\picboxLoadImage_Disabled.png" />
+    <Content Include="Icons\picboxLoadImage_Down.png" />
+    <Content Include="Icons\picboxLoadImage_Enter.png" />
+    <Content Include="Icons\picboxLoadImage_Leave.png" />
+    <Content Include="Icons\picboxMax_Down.png" />
+    <Content Include="Icons\picboxMax_Enter.png" />
+    <Content Include="Icons\picboxMax_Leave.png" />
+    <Content Include="Icons\picboxMin_Down.png" />
+    <Content Include="Icons\picboxMin_Enter.png" />
+    <Content Include="Icons\picboxMin_Leave.png" />
+    <Content Include="Icons\picboxMirror_Disabled.png" />
+    <Content Include="Icons\picboxMirror_Down.png" />
+    <Content Include="Icons\picboxMirror_Enter.png" />
+    <Content Include="Icons\picboxMirror_Leave.png" />
+    <Content Include="Icons\picboxNext_Disabled.png" />
+    <Content Include="Icons\picboxNext_Down.png" />
+    <Content Include="Icons\picboxNext_Enter.png" />
+    <Content Include="Icons\picboxNext_Leave.png" />
+    <Content Include="Icons\picboxPoint_Disabled.png" />
+    <Content Include="Icons\picboxPoint_Down.png" />
+    <Content Include="Icons\picboxPoint_Enter.png" />
+    <Content Include="Icons\picboxPoint_Leave.png" />
+    <Content Include="Icons\picboxPrevious_Disabled.png" />
+    <Content Include="Icons\picboxPrevious_Down.png" />
+    <Content Include="Icons\picboxPrevious_Enter.png" />
+    <Content Include="Icons\picboxPrevious_Leave.png" />
+    <Content Include="Icons\picboxRectangleA_Disabled.png" />
+    <Content Include="Icons\picboxRectangleA_Down.png" />
+    <Content Include="Icons\picboxRectangleA_Enter.png" />
+    <Content Include="Icons\picboxRectangleA_Leave.png" />
+    <Content Include="Icons\picboxRectangle_Disabled.png" />
+    <Content Include="Icons\picboxRectangle_Down.png" />
+    <Content Include="Icons\picboxRectangle_Enter.png" />
+    <Content Include="Icons\picboxRectangle_Leave.png" />
+    <Content Include="Icons\picboxResample_Disabled.png" />
+    <Content Include="Icons\picboxResample_Down.png" />
+    <Content Include="Icons\picboxResample_Enter.png" />
+    <Content Include="Icons\picboxResample_Leave.png" />
+    <Content Include="Icons\picboxRotateLeft_Disabled.png" />
+    <Content Include="Icons\picboxRotateLeft_Down.png" />
+    <Content Include="Icons\picboxRotateLeft_Enter.png" />
+    <Content Include="Icons\picboxRotateLeft_Leave.png" />
+    <Content Include="Icons\picboxRotateRight_Disabled.png" />
+    <Content Include="Icons\picboxRotateRight_Down.png" />
+    <Content Include="Icons\picboxRotateRight_Enter.png" />
+    <Content Include="Icons\picboxRotateRight_Leave.png" />
+    <Content Include="Icons\picboxRotate_Disabled.png" />
+    <Content Include="Icons\picboxRotate_Down.png" />
+    <Content Include="Icons\picboxRotate_Enter.png" />
+    <Content Include="Icons\picboxRotate_Leave.png" />
+    <Content Include="Icons\picboxSave_Disabled.png" />
+    <Content Include="Icons\picboxSave_Down.png" />
+    <Content Include="Icons\picboxSave_Enter.png" />
+    <Content Include="Icons\picboxSave_Leave.png" />
+    <Content Include="Icons\picboxScan_Disabled.png" />
+    <Content Include="Icons\picboxScan_Down.png" />
+    <Content Include="Icons\picboxScan_Enter.png" />
+    <Content Include="Icons\picboxScan_Leave.png" />
+    <Content Include="Icons\picboxTextA_Disabled.png" />
+    <Content Include="Icons\picboxTextA_Down.png" />
+    <Content Include="Icons\picboxTextA_Enter.png" />
+    <Content Include="Icons\picboxTextA_Leave.png" />
+    <Content Include="Icons\picboxText_Disabled.png" />
+    <Content Include="Icons\picboxText_Down.png" />
+    <Content Include="Icons\picboxText_Enter.png" />
+    <Content Include="Icons\picboxText_Leave.png" />
+    <Content Include="Icons\picboxTitle.png" />
+    <Content Include="Icons\picboxTotalImage_Leave.png" />
+    <Content Include="Icons\picboxZoomIn_Disabled.png" />
+    <Content Include="Icons\picboxZoomIn_Down.png" />
+    <Content Include="Icons\picboxZoomIn_Enter.png" />
+    <Content Include="Icons\picboxZoomIn_Leave.png" />
+    <Content Include="Icons\picboxZoomOut_Disabled.png" />
+    <Content Include="Icons\picboxZoomOut_Down.png" />
+    <Content Include="Icons\picboxZoomOut_Enter.png" />
+    <Content Include="Icons\picboxZoomOut_Leave.png" />
+    <Content Include="Icons\picboxZoom_Disabled.png" />
+    <Content Include="Icons\picboxZoom_Down.png" />
+    <Content Include="Icons\picboxZoom_Enter.png" />
+    <Content Include="Icons\picboxZoom_Leave.png" />
+    <Content Include="Icons\prepare32.png" />
+    <Content Include="Icons\print32.png" />
+    <Content Include="Icons\print321.png" />
+    <Content Include="Icons\printpreview32.png" />
+    <Content Include="Icons\printquick16.png" />
+    <Content Include="Icons\printquick32.png" />
+    <Content Include="Icons\publish32.png" />
+    <Content Include="Icons\pubrecs-e1457650512235.jpg" />
+    <Content Include="Icons\replace16.png" />
+    <Content Include="Icons\save16.png" />
+    <Content Include="Icons\save161.png" />
+    <Content Include="Icons\save32.png" />
+    <Content Include="Icons\saveas32.png" />
+    <Content Include="Icons\saveas321.png" />
+    <Content Include="Icons\scanner.png" />
+    <Content Include="Icons\Search.ico" />
+    <Content Include="Icons\Search1.ico" />
+    <Content Include="Icons\select16.png" />
+    <Content Include="Icons\send32.png" />
+    <Content Include="Icons\smallscanner.png" />
+    <Content Include="Icons\sort16.png" />
+    <Content Include="Icons\strikethru16.png" />
+    <Content Include="Icons\style16.png" />
+    <Content Include="Icons\stylechange32.png" />
+    <Content Include="Icons\styleset16.png" />
+    <Content Include="Icons\subindex16.png" />
+    <Content Include="Icons\superindex16.png" />
+    <Content Include="Icons\textaligncenter16.png" />
+    <Content Include="Icons\textalignjustify16.png" />
+    <Content Include="Icons\textalignleft16.png" />
+    <Content Include="Icons\textalignright16.png" />
+    <Content Include="Icons\themefont.png" />
+    <Content Include="Icons\Tree.ico" />
+    <Content Include="Icons\TWAIN Source.png" />
+    <Content Include="Icons\underline16.png" />
+    <Content Include="Icons\undo16.png" />
+    <Content Include="Icons\unorderedlist16.png" />
+    <Content Include="Icons\upload-icon.png" />
+    <Content Include="Icons\Upload1.bmp" />
+    <Content Include="Icons\User.ico" />
+    <Content Include="Icons\word2003doc32.png" />
+    <Content Include="Icons\worddocument32.png" />
+    <Content Include="Icons\wordtemplate32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ribbon\Ribbon35.csproj">
+      <Project>{46a18a55-5ae8-49ce-91cd-c7421b642e7e}</Project>
+      <Name>Ribbon35</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

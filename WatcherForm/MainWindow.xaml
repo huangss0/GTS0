@@ -1,0 +1,98 @@
+﻿<Window x:Class="WatcherForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"             
+        Title="File Watcher" Height="450" Width="400">
+    <Border Padding="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                
+
+                <TextBlock Text="Options:" FontSize="12" FontWeight="Bold" Margin="3 10 0 2"/>
+
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Server:" Grid.Column="0" TextAlignment="Right" Margin="1"/>
+                        <TextBox Name="url_textBox" Text="207.45.34.1" Grid.Column="1" Margin="2"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/> <!--Test column span-->
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Username:" Grid.Column="0" TextAlignment="Right" Margin="1"/>
+                        <TextBox Name="userName_textBox" Text="M0475201" Grid.Column="1" Margin="2" Grid.ColumnSpan="2"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Password:" Grid.Column="0" TextAlignment="Right" Margin="1"/>
+                        <TextBox Name="pwd_textBox" Text="GTShss03" Grid.Column="1" Margin="2"/>
+
+                    </Grid>
+                </StackPanel>
+
+                <Grid Margin="0 5 0 0"> <!--Login-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="login_button" Content="Login" Click="login_btn_Click" Margin="10 0"/>
+                    <Button Grid.Column="1" Name="createFile_button" Content="Create file" Margin="10 0 5 0" Click="createFile_button_Click"/>
+                    <CheckBox Grid.Column="2" Content="Output to desktop" Name="out_textBox" IsChecked="False" Margin="0 2 0 0"/>
+                </Grid>
+
+                <Grid Margin="0 5 0 0"> <!--upload-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="upload_button" Content="Upload" Margin="10 0 5 0" Click="upload_button_Click"/>
+                    <TextBox Grid.Column="1" Name="upFile_textBox" Margin="2 0"/>
+                </Grid>
+
+                <Grid Margin="0 5 0 0"> <!--download-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="download_button" Content="Download" Margin="10 0 5 0" Click="download_button_Click" />
+                    <TextBox Grid.Column="1" Name="downFile_textBox" Margin="2 0"/>
+                </Grid>
+
+                <Grid Margin="0 5 0 0"> <!--List files-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="List Files" Grid.Column="0" Margin="10 0 5 0" Name="listFiles_button" Click="listFiles_button_Click"/>
+                    <TextBox Grid.Column="1" Name="dir_textBox" Margin="2 0" Text="'FTXM0475'"/>
+                </Grid>
+            </StackPanel>
+
+            <!--Information output-->
+            <TextBox Name="info_textBox" TextWrapping="Wrap" AcceptsReturn="True" Grid.Row="1" VerticalScrollBarVisibility="Visible" Margin="2 10 2 2" />
+        </Grid>
+    </Border>
+</Window>
